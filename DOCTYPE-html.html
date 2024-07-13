@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            overflow: hidden;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .message {
+            font-size: 2em;
+            color: #ff69b4;
+            animation: sprinkle 2s infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes sprinkle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        .confetti {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+        }
+        .confetti div {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #ff69b4;
+            opacity: 0.7;
+            animation: confetti 5s linear infinite;
+        }
+        @keyframes confetti {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(100vh); }
+        }
+        .confetti div:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .confetti div:nth-child(2) { left: 20%; animation-delay: 0.5s; }
+        .confetti div:nth-child(3) { left: 30%; animation-delay: 1s; }
+        .confetti div:nth-child(4) { left: 40%; animation-delay: 1.5s; }
+        .confetti div:nth-child(5) { left: 50%; animation-delay: 2s; }
+        .confetti div:nth-child(6) { left: 60%; animation-delay: 2.5s; }
+        .confetti div:nth-child(7) { left: 70%; animation-delay: 3s; }
+        .confetti div:nth-child(8) { left: 80%; animation-delay: 3.5s; }
+        .confetti div:nth-child(9) { left: 90%; animation-delay: 4s; }
+    </style>
+</head>
+<body>
+    <div class="confetti">
+        <div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div>
+    </div>
+    <div class="container">
+        <div class="message">🎉 Happy Birthday to You Punammmmmmmmmm! 🎉</div>
+    </div>
+</body>
+</html>
